@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.github.javarar</groupId>
+    <artifactId>hw-1-threads-and-executors</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <name>Threads and Executors 2</name>
+    <description>Домашнее задание №6. Совместный доступ к состоянию объектов на гоферах</description>
+
+    <modules>
+       
+        <!-- Задание 1. Отложенное добавление заданий в пул -->
+        <module>task-1-delayed-addition-rejected-tasks</module>
+
+        <!-- Задание 2. Сервис по работе с Покемонами -->
+        <module>task-2-poke-service</module>
+
+        <!-- Задание 3. Запуск ограниченное кол-во раз -->
+        <module>task-3-limit-scheduling-task</module>
+    </modules>
+
+    <properties>
+        <!-- build properties-->
+        <java.source>17</java.source>
+        <java.target>17</java.target>
+        <maven.compile.plugin>3.10.0</maven.compile.plugin>
+
+        <!-- libraries -->
+        <lombok.version>1.18.22</lombok.version>
+
+        <!-- tests -->
+        <junit.version>5.8.2</junit.version>
+        <mockito.version>4.0.0</mockito.version>
+    </properties>
+
+    <licenses>
+        <license>
+            <name>The Apache Software License, Version 2.0</name>
+            <url>https://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+    <issueManagement>
+        <url>https://github.com/Java-rar/hw-1-threads-and-executors-template/issues</url>
+        <system>GitHub Issues</system>
+    </issueManagement>
+
+    <developers>
+        <developer>
+            <email>rgizmalkov.dev@gmail.com</email>
+            <name>Izmalkov Roman</name>
+            <url>https://github.com/ekgreen</url>
+            <id>ekgreen</id>
+        </developer>
+        <developer>
+            <email>alex1097@mail.ru</email>
+            <name>Shakhov Aleksandr</name>
+            <url>https://github.com/sh-ad</url>
+            <id>sh-ad</id>
+        </developer>
+        <developer>
+            <email>shariktlt@gmail.com</email>
+            <name>Sharypov Constantin</name>
+            <url>https://github.com/shariktlt</url>
+            <id>shariktlt</id>
+        </developer>
+    </developers>
+
+    <dependencies>
+        <!-- libraries -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${lombok.version}</version>
+        </dependency>
+
+        <!-- tests -->
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <version>${junit.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-params</artifactId>
+            <version>${junit.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-core</artifactId>
+            <version>${mockito.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-junit-jupiter</artifactId>
+            <version>${mockito.version}</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>${maven.compile.plugin}</version>
+                <configuration>
+                    <source>${java.source}</source>
+                    <target>${java.target}</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
