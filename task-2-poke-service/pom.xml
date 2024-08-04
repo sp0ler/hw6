@@ -20,7 +20,7 @@
         <!-- build properties-->
 
         <!-- libraries -->
-        <spring.boot.version>2.7.5</spring.boot.version>
+        <spring.boot.version>3.3.2</spring.boot.version>
 
         <!-- tests -->
     </properties>
@@ -51,6 +51,7 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
+            <version>3.3.2</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
@@ -60,6 +61,7 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>3.3.2</version>
                 <configuration>
                     <excludes>
                         <exclude>
